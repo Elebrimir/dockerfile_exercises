@@ -1,5 +1,5 @@
 # Usa la ultima imagen oficial de Ubuntu 22.04 como base
-FROM ubuntu:22.04
+FROM ubuntu:14.04
 
 #Establecer los parametros de las variable de entorno
 ENV MYSQL_USER=usuarioDockerfile MYSQL_PASSWORD=passwordDockerfile MYSQL_DATABASE=baseDeDatosDockerfile
