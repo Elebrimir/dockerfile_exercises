@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: contenedor_mysql
+    ports:
+      - 3308:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+    networks:
+      - prestashop-net
+
+  prestashop:
+    image: prestashop/prestashop
+    container_name: contenedor_prestashop
+    ports:
+      - 8080:80
+    environment:
+      - DB_SERVER=contenedor_mysql
+    networks:
+      - prestashop-net
+
+networks:
+  prestashop-net:
+    driver: bridge
