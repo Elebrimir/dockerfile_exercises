@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    extends:
+      file: common-config.yml
+      service: nginx-base
+    ports:
+      - '9004:80'
+    volumes:
+      - ./pro:/usr/share/nginx/html

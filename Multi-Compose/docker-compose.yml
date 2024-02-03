@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  nginx:
+    extends:
+      file: common-config.yml
+      service: nginx-base

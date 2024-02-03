@@ -1,0 +1,7 @@
+services:
+  nginx-base:
+    image: nginx
+    ports:
+      - '9002:80'
+    volumes:
+      - ./nginx_base:/usr/share/nginx/html
